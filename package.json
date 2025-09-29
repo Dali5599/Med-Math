@@ -55,9 +55,11 @@
     "electron-builder": "^25.1.8",
     "concurrently": "^9.1.0",
     "wait-on": "^8.0.1",
-    "node-pty": "^0.10.1",
     "rimraf": "^5.0.7",
     "cross-env": "^7.0.3"
+  },
+  "optionalDependencies": {
+    "node-pty": "^0.10.1"
   },
   "build": {
     "appId": "com.nodemanager.desktop",
@@ -142,4 +144,4 @@
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
   }
-"web-vitals": "^3.1.0"
+}

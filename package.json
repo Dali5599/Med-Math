@@ -143,3 +143,6 @@
     "npm": ">=8.0.0"
   }
 }
+"optionalDependencies": {
+  "node-pty": "^0.10.1"
+}

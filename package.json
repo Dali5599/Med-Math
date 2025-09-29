@@ -58,7 +58,7 @@
     "rimraf": "^5.0.7",
     "cross-env": "^7.0.3"
   },
-  "optionalDependencies": {
+  "optionalDependencies":
     "node-pty": "^0.10.1"
   },
   "build": {

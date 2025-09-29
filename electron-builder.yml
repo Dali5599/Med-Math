@@ -1,0 +1,62 @@
+
+appId: com.nodemanager.desktop
+productName: Node Manager
+copyright: Copyright © 2024 Node Manager
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - dist/**/*
+  - main.js
+  - preload.js
+  - package.json
+  - node_modules/**/*
+
+extraResources:
+  - from: assets
+    to: assets
+    filter:
+      - "**/*"
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  icon: assets/icon.ico
+  requestedExecutionLevel: asInvoker
+  
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Node Manager
+  installerIcon: assets/icon.ico
+  uninstallerIcon: assets/icon.ico
+
+linux:
+  target:
+    - target: AppImage
+      arch:
+        - x64
+    - target: deb
+      arch:
+        - x64
+  icon: assets/icon.png
+  category: Development
+  maintainer: Node Manager Team
+  
+mac:
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+  icon: assets/icon.icns
+  category: public.app-category.developer-tools
